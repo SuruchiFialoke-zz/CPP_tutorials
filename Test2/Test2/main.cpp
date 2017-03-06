@@ -8,7 +8,7 @@
 
 //
 //  test2.cpp
-//  Test Stuff
+//  String related 
 //
 //  Created by Suruchi on 3/5/17.
 //  Copyright © 2017 Suruchi. All rights reserved.
