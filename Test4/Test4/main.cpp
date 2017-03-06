@@ -31,19 +31,30 @@ void increment_byRef(double&, double) ;
 //@param double& - number1 to be incremented
 //@param double - increment value
 
+void ask_user(char&, double, double) ;
+// asking user for the operations they want to perform
+//@param char& stores string that result in various operations
+//@param double - 1st number
+//@param double - 2nd number
+
+
 int main() {
 
     double a, b ;
-    
+    char userChoice ;
     //whatAmI() ;
     cout<<"Enter two numbers: " ;
     cin>>a>>b ;
     
-    cout<<product(a,b)<<endl ;
+    //cout<<product(a,b)<<endl ;
+    //cout<<addition(a,b)<<endl ;
     
-    cout<<addition(a,b)<<endl ;
+    ask_user(userChoice, a,b) ;
     
     increment_byRef(a,b/2.0) ;
+    
+    //example of changing a variables value
+    //by going at its address
     cout<<a<<endl ;
     
     
@@ -73,4 +84,18 @@ void increment_byRef(double& num1, double incr){
     whatAmI() ;
     cout<<"Incrementing your 1st number by "<<incr<<": "<<endl ;
     num1 += incr ;
+}
+
+void ask_user(char& choice, double num1, double num2) {
+    cout<<"Enter m for multiplication and a for addition"<<endl ;
+    cin>>choice ;
+    if (choice =='m') {
+        cout<<product(num1,num2)<<endl ;
+    }
+    
+    else if (choice == 'a') {
+        cout<<addition(num1,num2)<<endl ;
+    }
+    
+    else cout<<"Go home you are drunk.."<<endl ;
 }
