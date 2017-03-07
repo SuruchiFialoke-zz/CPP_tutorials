@@ -2,7 +2,7 @@
 # The cover simple c++ exercises
 Test1: Uses STL cmath and algorithm
 
-Test2: Uses STL string
+Test2: Uses STL string, sstream
 
 Test3: Switch, global constants and precision
 
