@@ -21,13 +21,13 @@ double product(double, double) ;
 //@param double - 1st number to be multiplied
 //@param double - 2nd number to be multiplied
 
-double addition(double, double) ;
-// addition - adds two numbers
-//@param double - 1st number to be added
-//@param double - 2nd number to be added
+double divison(double, double) ;
+// divison - adds two numbers
+//@param double - 1st number
+//@param double - dividor
 
 void increment_byRef(double&, double) ;
-// addition - increments number by reference
+// divison - increments number by reference
 //@param double& - number1 to be incremented
 //@param double - increment value
 
@@ -37,17 +37,22 @@ void ask_user(char&, double, double) ;
 //@param double - 1st number
 //@param double - 2nd number
 
+template <class T>
+T sum (T inp1, T inp2) ;
+//Addition function that takes any type of input
+//@param inp1 - input 1
+//@param inp2 - input 2
 
 int main() {
 
     double a, b ;
     char userChoice ;
     //whatAmI() ;
-    cout<<"Enter two numbers: " ;
+    cout<<"Enter two non-zero numbers: " ;
     cin>>a>>b ;
     
     //cout<<product(a,b)<<endl ;
-    //cout<<addition(a,b)<<endl ;
+    //cout<<divison(a,b)<<endl ;
     
     ask_user(userChoice, a,b) ;
     
@@ -57,7 +62,20 @@ int main() {
     //by going at its address
     cout<<a<<endl ;
     
+    int i=5, j=6, k;
+    double f=2.0, g=0.5, h;
+    bool l='True', m='False', lm ;
     
+    string str1="Suruchi";
+    string str2="Fialoke";
+    string strSum;
+    
+    k=sum<int>(i,j);
+    h=sum<double>(f,g);
+    lm=sum<bool>(l,m);
+    strSum=sum<string>(str1,str2) ;
+    
+    cout<<k<<"\n"<<h<<"\n"<<lm<<"\n"<<strSum<<"\n" ;
     return 0;
 
 }
@@ -74,10 +92,10 @@ double product(double num1, double num2){
     return (num1*num2) ;
 }
 
-double addition(double num1, double num2){
+double divison(double num1, double num2){
     whatAmI() ;
-    cout<<"Addition"<<endl<<"result is: "<<endl ;
-    return (num1+num2) ;
+    cout<<"divison"<<endl<<"result is: "<<endl ;
+    return (num1/num2) ;
 }
 
 void increment_byRef(double& num1, double incr){
@@ -87,15 +105,23 @@ void increment_byRef(double& num1, double incr){
 }
 
 void ask_user(char& choice, double num1, double num2) {
-    cout<<"Enter m for multiplication and a for addition"<<endl ;
+    cout<<"Enter m for multiplication and d for divison"<<endl ;
     cin>>choice ;
     if (choice =='m') {
         cout<<product(num1,num2)<<endl ;
     }
     
-    else if (choice == 'a') {
-        cout<<addition(num1,num2)<<endl ;
+    else if (choice == 'd') {
+        cout<<divison(num1,num2)<<endl ;
     }
     
     else cout<<"Go home you are drunk.."<<endl ;
+}
+
+template <class T>
+T sum (T a, T b)
+{
+    T result;
+    result = a + b;
+    return result;
 }

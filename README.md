@@ -6,4 +6,6 @@ Test2: Uses STL string, sstream
 
 Test3: Switch, global constants and precision
 
-Test4: Functions, passing by value and passing by reference 
+Test4: Functions, passing by value and passing by reference, Template Function 
+
+Test5: Using simple arrays, using range function in for loop
