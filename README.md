@@ -14,5 +14,7 @@ Test6: Vectors, basic operations
 
 Test7: Vectors of Class 
 
-BMI: Using class to calculate BMI
+Test8: Static Variables with Classes
+
+BMI: Example: Using class to calculate BMI
 
