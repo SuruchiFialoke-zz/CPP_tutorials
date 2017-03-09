@@ -39,6 +39,7 @@ Bank::Bank(string newName, int newAccNum, double newBal) {
     accName = newName ;
     accNumber = newAccNum ;
     accBalance = newBal ;
+    
     totAccounts++ ;
     totBalance += accBalance ;
     }
@@ -46,7 +47,7 @@ Bank::Bank(string newName, int newAccNum, double newBal) {
 // Destructor
 Bank::~Bank() {
     totAccounts-- ;
-    totBalance += accBalance ;
+    totBalance -= accBalance ;
 }
 
 // Accessor Functions
