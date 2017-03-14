@@ -20,8 +20,8 @@ int main() {
     // insert code here...
     string nC1, nR1 ;
     
-    Shape None("nothing") ;
-    cout<<None.getName()<<"\n" ;
+    //Shape None("nothing") ;
+    //cout<<None.getName()<<"\n" ;
     
     cout<<"Enter your Circle name: \n" ;
     cin>>nC1 ;

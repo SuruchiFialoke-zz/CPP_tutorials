@@ -108,6 +108,3 @@ allT getSum(allT *p1, allT *p2) {
     return (*p1) + (*p2) ;
 }
 
-
-
-
