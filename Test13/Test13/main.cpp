@@ -36,5 +36,15 @@ int main() {
     Rectangle myRect1(nR1,5,10.0) ;
     cout<<"Area of My Rectangle: "<<myRect1.getName()<<" is: "<<myRect1.getArea()<<"\n" ;
     
+    // Create an Array of pointers to store different child objects
+    
+    Shape* allShapes[2] = {new Circle("nC2", 10.0),
+        new Rectangle("nR2", 4.4, 10.0) };
+    
+    cout<<"Area of My Circle: "<<allShapes[0]->getName()<<" is: "<<allShapes[0]->getArea()<<"\n" ;
+
+    cout<<"Area of My Rectangle: "<<allShapes[1]->getName()<<" is: "<<allShapes[1]->getArea()<<"\n" ;
+
+    
     return 0;
 }
