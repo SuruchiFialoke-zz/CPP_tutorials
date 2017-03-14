@@ -1,0 +1,11 @@
+#Fruit  Quantity
+banana  2
+mango   3
+berry   10  
+pear    5
+apple   8   
+orange  8   
+grapes  100
+cherry  40
+lychee  10
+melon   5

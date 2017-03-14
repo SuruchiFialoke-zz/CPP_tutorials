@@ -7,6 +7,9 @@
 //
 
 #include <iostream>
+#include <fstream>
+
+
 using namespace std ;
 
 void counter(int) ;
@@ -32,6 +35,19 @@ int main() {
     cout<<"Factorial: "<<factorial(num)<<"\n" ;
     
     cout<<"Fibonacci "<<fibonacci(num)<<"\n" ;
+    
+    //File input output operations..
+    ifstream inFile ;
+    inFile.open("fruit.txt") ;
+    
+    //check for error
+    
+    if(inFile.fail()){
+        cerr<<"Error opening File!\n" ;
+        exit(1) ;
+    }
+    
+    
     return 0;
 }
 
@@ -41,7 +57,7 @@ void counter (int count) {
     // the subsequent values should lead to base case
     if(count >= 0) {
         counter (count -1) ;
-        cout<<" \n Number: "<<count<<" " ;
+        cout<<" "<<count<<" " ;
         //flip the order of the above statments to change the order
     }
     //cout<<"Done with your number!!\n" ;
