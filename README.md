@@ -17,15 +17,15 @@ Test7: Vectors of Class
 
 Test8: Static Variables with Classes
 
-Test9: 
+Test9: Classes-Inheritance
 
-Test10: 
+Test10: Pointers
 
-Test11: 
+Test11: Recursion
 
-Test12: 
+Test12: Classes-Inheritance
 
-Test13: 
+Test13: Classes-Polymorphism 
 
 Test14: Sorting Algorithms (Selection, Bubble, Insertion, Merge )
 
